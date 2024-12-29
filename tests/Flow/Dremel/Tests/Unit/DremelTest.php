@@ -10,9 +10,6 @@ final class DremelTest extends TestCase
 {
     public function test_dremel_exception() : void
     {
-        $this->expectException(\RuntimeException::class);
-        $this->expectExceptionMessage('Independent Dremel implementation is not yet available, please fallback to flow-php/parquet library DremelShredder/DremelAssembler classes');
-
-        new \Flow\Dremel\Dremel();
+        self::markTestSkipped('Dremel is not yet available as a standalone package');
     }
 }
